@@ -1,3 +1,4 @@
+
 # HuntedGameUnreal - WIP first commit
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
@@ -60,6 +61,10 @@ The Steam Online Subsystem is a module that integrates Steamworks features into 
 
 https://github.com/AlbertTM8/HuntedGameUnreal/assets/115167346/adf5826f-b522-4d27-8648-8ed7ad73a54e
 
+<br />
+And the host's perspective of the online version. You can host online sessions and invite your friends through the friends list in steam.
+
+Uploading Untitled video (6).mp4…
 
 ## Random Maze Generator
 
@@ -67,4 +72,14 @@ I created this c++ class for randomly generating mazes, by randomly "walking" ar
 
 
 https://github.com/AlbertTM8/HuntedGameUnreal/assets/115167346/a314a60e-9954-4a0f-90a6-b734a3140ded
+
+## Some Random Blueprint Bits
+
+https://github.com/AlbertTM8/HuntedGameUnreal/assets/115167346/064352ad-cdaa-4bcf-99b8-61141a182b60
+
+Uploading Untitled video.mp4…<br />
+
+Definitely should've used dynamic materials here instead of a decal. Was too concerned about performance.
+
+https://github.com/AlbertTM8/HuntedGameUnreal/assets/115167346/5f3019b2-e42e-4a5e-9aed-1ca20bfc2a79
 
