@@ -33,7 +33,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Including some of my C++ classes for source control, as well as demo photos/videos here in the Readme about what each one does. 
+Including some of my C++ classes for source control, as well as demo photos/videos here in the Readme about what each one does. Obviously, they also need some implementation in the blueprints but my whoe project is too much to upload to github.
 
 ### Current C++ Classes:   <br />
 Steam OnlineSubsystem - for multiplayer purposes.   <br />
