@@ -19,7 +19,7 @@
   <h3 align="center">Hunter Game C++ Classes</h3>
 
   <p align="center">
-    PvP Action Survival Game C++ Classes
+    PvP Action Survival Game C++ Classes - WIP first commit
     <br />
     <br />
     <br />
