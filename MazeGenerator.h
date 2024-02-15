@@ -25,6 +25,7 @@ protected:
         int8 GetValue(int32 X, int32 Y) const { return Data[X + Y * MazeGen.Width]; }
         void SetValue(int32 X, int32 Y, int8 value) { Data[X + Y * MazeGen.Width] = value; }
         TArray<int8> GetMaze() { return Data; }
+
     private:
         AMazeGenerator& MazeGen;
         TArray<int8> Data;
@@ -48,12 +49,13 @@ protected:
 
 
     WorldDirections Directions;
-
 	void Step(int32 X, int32 Y);
 	void Draw() const;
 	void PlacePiece(int32 X, int32 Y, float Yaw, TSubclassOf<AActor> Piece) const;
 	bool IsPatternMatching(int32 X, int32 Y, TArray<int8> Pattern) const;
+    bool IsWall(int32 X, int32 Y) const;
     void MakeRooms();
+    void PlaceRoomWalls();
 	// Straight
     TArray<int8> HorizontalStraightPattern = { 5, 1, 5,
                                                0, 0, 0,
@@ -118,6 +120,8 @@ protected:
     TArray<int8> DeadEndRightPattern = { 5, 1, 5,
                                          1, 0, 0,
                                          5, 1, 5 };
+ 
+
 
 public:
 	UPROPERTY(EditAnywhere)
@@ -159,6 +163,8 @@ public:
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<AActor> RoomPiece;
 
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<AActor> WallPiece;
     
 };
 
