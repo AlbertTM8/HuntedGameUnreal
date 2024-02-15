@@ -1,4 +1,4 @@
-# HuntedGameUnreal
+# HuntedGameUnreal - WIP first commit
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 
@@ -19,7 +19,7 @@
   <h3 align="center">Hunter Game C++ Classes</h3>
 
   <p align="center">
-    PvP Action Survival Game C++ Classes - WIP first commit
+    PvP Action Survival Game C++ Classes
     <br />
     <br />
     <br />
