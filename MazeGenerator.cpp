@@ -181,7 +181,6 @@ bool AMazeGenerator::IsWall(int32 X, int32 Y) const
         }
     }
     return Count < 1 && (Maze.GetValue(X, Y) == 1) ;
-    return Count < 1 && (Maze.GetValue(X, Y) == 1) ;
 }
 //place the walls if its in the right position
 void AMazeGenerator::PlaceRoomWalls(){
