@@ -17,9 +17,15 @@ void AMazeGenerator::BeginPlay()
 
     Super::BeginPlay();
     Maze.Init();
-    MakeRooms();
     Step(StartX, StartY);
+    MakeRooms();
     Draw();
+    PlaceRoomWalls();
+    FString MazeString = "";
+    for(int i = 0; i<Width*Height; i++){
+        MazeString.AppendInt(Maze.GetValue(i%Width, i/Width));
+    }
+    UE_LOG(LogTemp, Warning, TEXT("%s"), *MazeString);
 }
 
 void AMazeGenerator::Step(int32 X, int32 Y)
@@ -100,6 +106,7 @@ void AMazeGenerator::Draw() const
     for (int i = 0; i < RoomSizes.Num(); i++){
         if(RoomStartPositions.Num() == RoomSizes.Num()*2){
         PlacePiece(RoomStartPositions[i*2]+(RoomSizes[i]/2), RoomStartPositions[(i*2)+1]+(RoomSizes[i]/2), 0.f, RoomPiece);
+
         }
         else{
             UE_LOG(LogTemp, Warning, TEXT("RoomStartPositions array is not the correct size"));
@@ -144,12 +151,47 @@ void AMazeGenerator::PlacePiece(int32 X, int32 Y, float Yaw, TSubclassOf<AActor>
 void AMazeGenerator::MakeRooms(){
     for (int i = 0; i < RoomSizes.Num(); i++){
         int32 size = RoomSizes[i];
+        if(RoomStartPositions[i*2] % 2 != 0){
+            RoomStartPositions[i*2]--;
+        }
+        if(RoomStartPositions[i*2+1] % 2 != 0){
+            RoomStartPositions[i*2+1]--;
+        }
         int32 start_x = RoomStartPositions[i*2];
         int32 start_y = RoomStartPositions[i*2+1];
         for(int j = start_x; j < start_x+size; j++){
             for(int k = start_y; k < start_y+size; k++){
                 Maze.SetValue(j, k, 2);
-            }    
+            }
+        }
+    }
+}
+//check if the current position has at least 1 2 in the 3x3 grid and less then 3 2's
+bool AMazeGenerator::IsWall(int32 X, int32 Y) const
+{
+    int Count = 0;
+    for (int y = 1; y > -2; y--)
+    {
+        for (int x = -1; x < 2; x++)
+        {
+            if (Maze.GetValue(X + x, Y + y) == 2)
+            {
+                Count++;
+            }
+        }
+    }
+    return Count < 1 && (Maze.GetValue(X, Y) == 1) ;
+    return Count < 1 && (Maze.GetValue(X, Y) == 1) ;
+}
+//place the walls if its in the right position
+void AMazeGenerator::PlaceRoomWalls(){
+    for (int32 x = 1; x < Width - 1; x++)
+    {
+        for (int32 y = 1; y < Height - 1; y++)
+        {
+            if(IsWall(x, y)) { 
+                PlacePiece(x, y, 90.f, WallPiece);
+                 }
         }
     }
 }
