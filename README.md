@@ -64,7 +64,9 @@ https://github.com/AlbertTM8/HuntedGameUnreal/assets/115167346/adf5826f-b522-4d2
 <br />
 And the host's perspective of the online version. You can host online sessions and invite your friends through the friends list in steam.
 
-Uploading Untitled video (6).mp4…
+
+https://github.com/AlbertTM8/HuntedGameUnreal/assets/115167346/7ab1e6b8-bc80-4c47-bb36-5ed1270868b4
+
 
 ## Random Maze Generator
 
