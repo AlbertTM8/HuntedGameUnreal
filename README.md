@@ -4,7 +4,11 @@
 <a name="readme-top"></a>
 
 
-https://github.com/AlbertTM8/HuntedGameUnreal/assets/115167346/a314a60e-9954-4a0f-90a6-b734a3140ded
+
+https://github.com/AlbertTM8/HuntedGameUnreal/assets/115167346/31c9e6e4-9ca9-492d-b9f3-010e5a7c090c
+
+
+
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -70,10 +74,9 @@ https://github.com/AlbertTM8/HuntedGameUnreal/assets/115167346/7ab1e6b8-bc80-4c4
 
 ## Random Maze Generator
 
-I created this c++ class for randomly generating mazes, by randomly "walking" around in the world until it runs out of places to go. It also can generate rooms based on the blueprint data as shown in the video. The assets are from a maze generation blog that my code is built upon. 
+I created this c++ class for randomly generating mazes, by randomly "walking" around in the world until it ran out of places to go. It also can generate rooms based on the blueprint data as shown in the video.
+https://github.com/AlbertTM8/HuntedGameUnreal/assets/115167346/31c9e6e4-9ca9-492d-b9f3-010e5a7c090c
 
-
-https://github.com/AlbertTM8/HuntedGameUnreal/assets/115167346/a314a60e-9954-4a0f-90a6-b734a3140ded
 
 ## Some Random Blueprint Bits
 
